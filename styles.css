@@ -1,0 +1,645 @@
+/* @charset "utf-8";
+/* CSS Document */
+
+body {
+    padding-top: 70px;
+    font-family: Arial, sans-serif;
+
+}
+header, section, footer {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    flex: 1;
+    width: 100%;
+}
+a {
+    text-decoration: none;
+    color: #ffffff;
+}
+header {
+    justify-content: space-between;
+    position: fixed;
+    align-items: center;
+    top: 0;
+    height: 74px;
+    background: #515763;
+    z-index: 10;
+}
+header img {
+    max-width: 100%;
+    height: 64px;
+    display: block;
+    padding: 0 16px;
+}
+header .nav {}
+header .nav a {
+    margin: 0 8px;
+    color: #fff;
+    font-weight: bold;
+}
+header .icons {
+    font-size: 0;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+}
+header .icons a {
+    width: 64px;
+    height: 64px;
+    display: block;
+    -webkit-filter: invert(1);
+    -o-filter: invert(1);
+    filter: invert(1);
+}
+header .icons a:nth-child(1) {
+    background: url("images/search.svg") center / 24px no-repeat;
+
+}
+header .icons a:nth-child(2) {
+    background-image: url("images/user.svg");
+    background-size: 24px; 
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 64px;
+    height: 64px;
+    position: relative;
+}
+header .icons a:nth-child(3) {
+    background-image: url("images/shopping-cart.svg");
+    background-size: 24px; 
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 64px;
+    height: 64px;
+    position: relative; 
+}
+.cart-icon {
+    width: 24px; 
+    height: 24px;
+    display: block;
+    margin: auto; 
+}
+.cart-badge {
+    font-size: 0.85rem; 
+    color: white; 
+    background-color: red; 
+    border-radius: 50%; 
+    min-width: 1.5em; 
+    text-align: center; 
+    line-height: 1.5em; 
+    left: 28px;
+    top: 20px;
+    position: absolute; 
+    transform: translate(50%, -50%); 
+    filter: invert(1)
+    
+
+}
+section {
+    flex-flow: column nowrap;
+    width: 100%;
+    background: #fff;
+}
+section div[class*="banner"] {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 16px;
+    padding: 0 0 16px 0;
+}
+section div[class*="banner"] a {
+    width: 100%;
+    position: relative;
+    height: 400px;
+    background: #f4f4f4;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column nowrap;
+    grid-gap: 16px;
+}
+
+/* banner 1 */
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+section .banner1 .banner1-img { 
+    width: 100% !important;
+    position: relative;
+    height: 531px !important;
+    background: #f4f4f4;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column nowrap;
+    grid-gap: 16px;
+}
+section .banner1 .banner1-img h1 { 
+    font-size: 6.5em !important; 
+    
+}
+section .banner1 .banner1-img p { 
+    font-size: 1.5em !important;
+      
+    font-weight: bold;
+}
+section div[class*="banner"] a div {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+section div[class*="banner"] a span {
+    display: inline-block;
+    padding: 16px 32px;
+    border: 2px solid;
+}
+section div.banner2 {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0 16px;
+}
+section div.banner2 a {}
+section div.banner3 {
+    grid-template-columns: repeat(6, 1fr);
+    padding: 16px;
+}
+section div.banner3 a {
+    height: 150px;
+}
+/* BANNER 1 - Single big image */
+.banner1 .banner1-img:nth-child(1) {
+    position: relative; 
+    background-image: url('https://www.clivemitchellcycles.co.uk/images//harookz-6206-squashed-copy.jpg?width=1920&quality=85&mode=crop&format=webp&bgcolor=ffffff');
+    background-size: cover;
+    background-position: center;
+}
+
+
+.banner1 .banner1-img button {
+    text-align: left; 
+    margin-left: 45px;
+    position: absolute; 
+    bottom: 100px; 
+}
+.banner1 .banner1-img p, h1 {
+    
+    font-weight: bold;
+    text-align: left; 
+    margin-left: 45px; 
+    align-self: flex-start; 
+}
+
+
+/* BANNER 2 - Two side by side images */
+.banner2 a:nth-child(1) {
+    background-image: url('images/Frame\ 1000001223.png');
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+}
+.banner2 a:nth-child(1)::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.2); 
+    z-index: -1; 
+}
+.banner2 a:nth-child(2) {
+    background-image: url('images/rider.jpg');
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+}
+.banner2 a:nth-child(2)::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.3); 
+    z-index: -1; 
+}
+
+/* BANNER 3 - Six smaller images */
+.banner3 a:nth-child(1) {
+    background-image: url('https://www.clivemitchellcycles.co.uk/images/citrsim42234955381901-2.jpg?width=480&height=480&format=webp&quality=70&scale=both');
+    background-size: cover;
+    background-position: center;
+}
+.banner3 a:nth-child(2) {
+    background-image: url('https://www.clivemitchellcycles.co.uk/images/cycle-cube-u-agreec62slt-nebulawhite.jpg?width=480&height=480&format=webp&quality=70&scale=both');
+    background-size: cover;
+    background-position: center;
+}
+.banner3 a:nth-child(3) {
+    background-image: url('https://www.clivemitchellcycles.co.uk/images/94424-62_roubaix-sport-105-metsphr-bluonyx_hero.jpg?width=480&height=480&format=webp&quality=70&scale=both');
+    background-size: cover;
+    background-position: center;
+}
+.banner3 a:nth-child(4) {
+    background-image: url('https://www.clivemitchellcycles.co.uk/images/94924-30_tarmac-sl8-expert-smk-obsd_hero.jpg?width=480&height=480&format=webp&quality=70&scale=both');
+    background-size: cover;
+    background-position: center;
+}
+.banner3 a:nth-child(5) {
+    background-image: url('https://www.clivemitchellcycles.co.uk/images/products/e/e6/e652d8aa915a21211541a2e6ab66a1d1.png?width=480&height=480&format=webp&quality=70&scale=both');
+    background-size: cover;
+    background-position: center;
+}
+.banner3 a:nth-child(6) {
+    background-image: url('https://www.clivemitchellcycles.co.uk/images/cycle-cube-u-nuroadc62slx-solareclipseaurum.jpg?width=480&height=480&format=webp&quality=70&scale=both');
+    background-size: cover;
+    background-position: center;
+}
+.banner3 a {
+ position: relative;
+ bottom: 0px;
+}
+
+footer {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    justify-content: center;
+    padding: 44px;
+    grid-gap: 44px;
+    width: auto;
+    background: #515763;
+}
+footer div {
+    padding: 0 0px;
+}
+footer div h3 {
+    font-weight: bold;
+    margin-bottom: 16px;
+    color: #fff;
+}
+footer div a {
+    display: block;
+    font-size: 14px;
+    margin-top: 8px;
+    color: #fff;
+} 
+.brands{
+    white-space: nowrap;
+    overflow: hidden;
+    padding: 60px 0 60px 10px;
+    position: relative;
+}
+.brands:before,
+.brands:after{
+position: absolute;
+    top: 0;
+    width: 250px;
+    height: 100%;
+    background: linear-gradient(to right,rgba(255, 255, 255, 0), white);
+    content: "";
+    z-index: 2;
+}
+
+.brands:before{
+    left: -100px;
+    background: linear-gradient(to left,rgba(255, 255, 255, 0), white);
+   
+}
+.brands:after{
+    right: -100px;
+    background: linear-gradient(to right,rgba(255, 255, 255, 0), white);
+}
+.brands:hover .brand-slide{
+    animation-play-state: paused;
+}
+.brand-slide{
+    display: inline-block;
+    animation: 35s slide infinite linear;
+}
+.brand-slide img{
+    
+    height: 80px;
+    margin: 0 60px;
+    
+}
+@keyframes slide {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 200px;
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .grid-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 3px;
+  }
+  
+  .grid-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  
+  .overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0,0,0,0.3);
+    color: white;
+    padding: 26px;
+    padding-top: 300px;
+    box-sizing: border-box;
+  }
+  
+  .overlay h3 {
+    margin: 0 0 5px;
+    font-size: 1.2rem;
+  }
+  
+  .overlay p {
+    margin: 0 0 10px;
+    font-size: 1rem;
+  }
+.overlay button {
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+    padding: 6px 12px;
+    font-size: 0.9rem;
+    border-radius: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+  
+  .overlay button:hover {
+    background-color: white; 
+    color: red; 
+}
+
+.grid-item.big {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+  
+  
+.grid-item:hover img {
+    transform: scale(1.05);
+    transition: transform 0.5s ease;
+}
+  .banner3 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+    gap: 16px; 
+    padding: 16px;
+}
+
+.banner3 img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px; 
+}
+
+.banner3 h3 {
+    font-size: 1.2em;
+    margin: 8px 0 4px;
+}
+
+.banner3 p {
+    font-size: 1em;
+    color: #6c757d; 
+}
+
+.banner2 a div {
+    text-align: left; 
+    color: white; 
+    font-size: 1.5em; 
+    font-weight: bold; 
+    padding-left: 16px; 
+}
+.banner2 {
+    display: flex;
+    flex-direction: column; 
+    gap: 16px; 
+    padding: 16px; 
+}
+
+.banner2 a {
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-start; 
+    text-decoration: none; 
+}
+
+.banner2 div {
+    font-size: 1.5em; 
+    font-weight: bold; 
+}
+
+.banner2 .btn {
+    border-width: 2px; 
+    padding: 8px 16px; 
+    transition: all 0.3s ease; 
+}
+
+.banner2 .btn:hover {
+    background-color: white; 
+    color: black; 
+    border-color: white; 
+}
+  
+.logo-overlay {
+   
+    color: #1C1D22; 
+    height: 100vh; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.logo-overlay img {
+    max-width: 300px; 
+    z-index: 2; 
+}
+
+.overlay-text {
+    z-index: 1; 
+    text-align: center;
+}
+
+/* add to cart button */
+.card-body .btn {
+    margin-top: 10px; 
+    transition: all 0.3s ease; 
+}
+
+.card-body .btn:hover {
+    background-color: red; 
+    color: white; 
+}
+
+/* card body */
+#custom-cards .card {
+    height: 400px !important; 
+    position: relative; 
+    overflow: hidden; 
+    border-radius: 8px; 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+}
+
+#custom-cards .card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); 
+    z-index: 1; 
+}
+
+#custom-cards .card .d-flex {
+    position: relative;
+    z-index: 2; 
+}
+
+#custom-cards .card h3 {
+    font-size: 2rem; 
+    color: white; 
+}
+
+#custom-cards .card small {
+    color: #ccc; 
+}
+
+/* payment logo */
+.payment-logo {
+    height: 23px; 
+    object-fit: contain; 
+    max-width: 100px; 
+}
+/* footer */
+footer {
+    background-color: #1C1D22; 
+    color: #ffffff; 
+}
+
+/* navigation */
+#category-grid {
+    display: flex;
+    justify-content: center;    
+    align-items: stretch;
+    gap: 16px;
+    padding: 20px;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    max-width: 100%;
+}
+
+#category-grid .card {
+    flex: 0 0 auto;
+    width: 200px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    transition: transform 0.2s ease-in-out;
+    background-color: #fff;
+    overflow: hidden;           
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.card-body {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-title {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    word-break: break-word;     
+}
+
+
+#category-grid::-webkit-scrollbar {
+    display: none;
+}
+#category-grid {
+    -ms-overflow-style: none;  
+    scrollbar-width: none;     
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+#best-sellers .card{
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    transition: transform 0.2s ease-in-out;
+}
+
+
+
+
+.navbar .btn-close {
+    background-color: transparent;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.navbar .btn-close:hover {
+    color: #ff0000; 
+}
+/* Optional: Adjust logo size for small screens */
+@media (max-width: 768px) {
+    .navbar-brand img {
+      height: 30px; 
+    }
+  }
+  
+  /* Off-canvas Cart Position */
+  .offcanvas-end {
+    width: 300px; 
+  }
+
+  .nav-right {
+    margin-left: auto; 
+}
+.list-unstyled a {
+    color: #1C1D22; 
+    text-decoration: none; 
+}
+
+.list-unstyled a:hover {
+    color: #6c757d; 
+}
